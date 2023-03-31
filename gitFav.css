@@ -97,6 +97,24 @@ table {
     box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 }
 
+.tabela-scroll {
+    position: relative;
+    height: 35rem;
+}
+
+
+.barra-rolagem {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    border-radius: 5px;
+
+    
+}
+
 table th {
     background: #092D38;
     text-align: left;
@@ -179,9 +197,4 @@ td .remove {
     font-size: 1.5rem;
 
     cursor: pointer;
-}
-
-#table {
-    max-height: 3000rem;
-    overflow: scroll;
 }
