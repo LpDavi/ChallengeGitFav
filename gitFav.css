@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --primary-bg-color: #000000;
+    --settings-color: #4A808C;
+    --ff-primary: 'Poppins', sans-serif;
+    
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--primary-bg-color);
+    font-family: var(--ff-primary);
+}
+
+#app {
+    padding: 2rem;
+    max-width: 102rem;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 11.5rem 0 8.7rem 0;
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 18.6rem;
+    height: 3.2rem;
+    margin-right: 29.3rem;
+}
+
+button.favorit{
+    background: #065E7C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+
+    width: 17rem;
+    height: 4.8rem;
+
+    border-radius: .5rem;
+    border: none;
+    margin: 0 0 0 1rem;
+
+    color: #FFF;
+    font-family: var(--ff-primary);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+button:hover {
+    background-color: #FFF;
+    color: #065E7C;
+}
+
+#input-search {
+    width: 32rem;
+    height: 4.8rem;
+    border-radius: .4rem;
+    padding: 1rem;
+    border: none;
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: #06181C;
+    color: #CCC;    
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table th {
+    background: #092D38;
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+
+    color: #FFF;
+}
+
+table th:first-child {
+    padding-left: 6rem;
+}
+
+td.repositories {
+    color: #FFF;
+}
+
+td.followers {
+    color: #FFF;
+}
+
+table th:first-child {
+    border-top-left-radius: .5rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {
+    background: #092D38;
+}
+
+table tr:nth-child(odd){
+    background: rgba(6, 22, 27, 0.5);
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 50.4rem;
+    height: 10.4rem;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 4rem;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+    color: #FFF;
+}
+
+td.user span {
+    color: #FFF;
+}
+
+td .remove {
+    background: none;
+    border: none;
+
+    color: #F75A68;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+#table {
+    max-height: 3000rem;
+    overflow: scroll;
+}
