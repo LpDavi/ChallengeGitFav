@@ -13,7 +13,7 @@ export class Fav {
         this.entries = JSON.parse(localStorage.getItem('@github-Fav:')) || []
     }
 
-    save () {
+    save() {
         localStorage.setItem('@github-Fav:', JSON.stringify(this.entries))
     }
 
@@ -21,13 +21,13 @@ export class Fav {
         try {
             const userExists = this.entries.find(entry => entry.login === username)
 
-            if(userExists) {
+            if (userExists) {
                 throw new Error('Usuário ja cadastrado!')
             }
 
             const user = await GithubUser.search(username)
 
-            if(user.login === undefined) {
+            if (user.login === undefined) {
                 throw new Error('Usuário não encontrado!')
             }
 
@@ -35,7 +35,7 @@ export class Fav {
             this.update()
             this.save()
 
-        }catch(error) {
+        } catch (error) {
             alert(error.message)
         }
 
@@ -64,13 +64,13 @@ export class FavView extends Fav {
 
     onadd() {
         const addButton = this.root.querySelector('.favorit')
-        addButton.onclick = () => { 
+        addButton.onclick = () => {
             const { value } = this.root.querySelector('#input-search')
             this.add(value)
-         }
+        }
     }
 
-    update() { 
+    update() {
         this.removeAllTr() //Tirando a table com JS
 
         this.entries.forEach(user => { // Para cada "usuário" ele tem que passar por essas alterações
@@ -86,8 +86,8 @@ export class FavView extends Fav {
 
             row.querySelector('.remove').onclick = () => {
                 const isOK = confirm('Tem certeza que deseja deletar essa linha?')
-                    if(isOK) {
-                        this.delete(user)
+                if (isOK) {
+                    this.delete(user)
                 }
             }
 
@@ -95,7 +95,7 @@ export class FavView extends Fav {
         })
 
     }
-    
+
     creatRow() { // Criando a table com JS
         const tr = document.createElement('tr') // Criando o  "tr" com a DOM
 
@@ -122,7 +122,7 @@ export class FavView extends Fav {
 
     removeAllTr() { //Essa função está tirando a tabela do HTML para depois colocar a table com JS
         this.tbody.querySelectorAll('tr').forEach((tr) => {
-           tr.remove()
+            tr.remove()
         })
     }
 }

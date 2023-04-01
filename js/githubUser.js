@@ -3,15 +3,15 @@ export class GithubUser {
         const endpoint = `https://api.github.com/users/${username}`
 
         /*O fetch() busca os dados na URL que eu colocar, no caso "endpoint"
-        O fetch() também é uma promess, então se usa o THEN e QUANDO ele terminar essa tarefa, ele executa a função*/ 
+        O fetch() também é uma promess, então se usa o THEN e QUANDO ele terminar essa tarefa, ele executa a função*/
         return fetch(endpoint)
-        .then(data => data.json())
-        .then(({ login, name, public_repos, followers }) => ({
-            login,
-            name,
-            public_repos,
-            followers
-        }))
+            .then(data => data.json())
+            .then(({ login, name, public_repos, followers }) => ({
+                login,
+                name,
+                public_repos,
+                followers
+            }))
     }
 }
 

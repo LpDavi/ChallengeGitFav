@@ -10,7 +10,7 @@
     --primary-bg-color: #000000;
     --settings-color: #4A808C;
     --ff-primary: 'Poppins', sans-serif;
-    
+
 }
 
 body {
@@ -45,7 +45,7 @@ header {
     margin-right: 29.3rem;
 }
 
-button.favorit{
+button.favorit {
     background: #065E7C;
     display: flex;
     justify-content: center;
@@ -86,7 +86,7 @@ button:hover {
     font-size: 1.5rem;
     font-weight: 400;
     background-color: #06181C;
-    color: #CCC;    
+    color: #CCC;
     cursor: pointer;
 }
 
@@ -111,8 +111,6 @@ table {
     left: 0;
     overflow-y: scroll;
     border-radius: 5px;
-
-    
 }
 
 table th {
@@ -148,7 +146,7 @@ table tr:nth-child(even) {
     background: #092D38;
 }
 
-table tr:nth-child(odd){
+table tr:nth-child(odd) {
     background: rgba(6, 22, 27, 0.5);
 }
 
