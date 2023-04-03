@@ -9,11 +9,11 @@ export class Fav {
         //GithubUser.search('').then(user => (user))
     }
 
-    load() {
-        this.entries = JSON.parse(localStorage.getItem('@github-Fav:')) || []
+    load() { // Função JSON.parse() é usada para analisar uma string JSON e converter seu conteúdo em um objeto
+        this.entries = JSON.parse(localStorage.getItem('@github-Fav:')) || [] 
     }
 
-    save() {
+    save() { // Função JSON.stringfy() é usada para converter um objeto JavaScript em uma string JSON.
         localStorage.setItem('@github-Fav:', JSON.stringify(this.entries))
     }
 
